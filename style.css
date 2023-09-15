@@ -1,0 +1,183 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    outline: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #352F44;
+}
+
+.container{
+    font-family: 'Roboto', sans-serif ;
+    position: relative;
+    background-image: linear-gradient(100deg, lightblue, cyan);
+    width: 400px;
+    height: 80px;
+    overflow: hidden;
+    padding: 20px 24px;
+    border-radius: 20px;
+    transition: 0.8s ease-out;
+}
+
+.search-box{
+    width: 100%;
+    height: min-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-box input{
+    width: 80%;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: transparent;
+    text-transform: uppercase;
+    padding-left: 10px;
+    border-radius: 20px;
+}
+
+.search-box input::placeholder{
+    text-transform: capitalize;
+    font-size: 18px;
+    color: #352F44;
+    font-weight: 500;
+}
+
+.search-box button{
+    background-color: #B9B4C7;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s ease;
+    font-size: 18px;
+}
+
+.search-box button:hover{
+    color: #fff;
+    background-color: #352F44;
+}
+
+.search-box i{
+    font-size: 25px;
+    color: #352F44;
+}
+
+.weather-box{
+    text-align: center;
+}
+
+.weather-box .suhu{
+    position: relative;
+    color: #352F44;
+    font-size: 3rem;
+    font-weight: 800;
+    margin-top: 30px;
+    margin-left: -16px;
+}
+.weather-box img{
+    width: 200px;
+    height: 200px;
+}
+
+.weather-box .suhu span{
+    position: absolute;
+    margin-left: 3px;
+    font-size: 0.5em;
+}
+
+.weather-box .keterangan{
+    color: #352F44;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.weather-details{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.weather-details .kelembapan, .weather-details .angin{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100px;
+}
+.weather-details .kelembapan{
+    margin-left: 20px;
+    justify-content: flex-start;
+}
+
+.weather-details .angin{
+    margin-right: 20px;
+    justify-content: flex-end;
+}
+
+.weather-details i{
+    font-size: 24px;
+    margin-right: 8px;
+    margin-top: 4px;
+    color: #352F44;
+}
+
+.weather-details span{
+    color: #352F44;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.weather-details p{
+    color: #352F44;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.not-found{
+    color: #352F44;
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    scale: 0;
+    opacity: 0;
+    display: none;
+}
+
+.not-found img{
+    width: 70%;
+}
+
+.not-found p{
+    color: #352F44;
+    font-size: 20px;
+    margin-top: 12px;
+    font-weight: 500;
+}
+
+.weather-box, .weather-details{
+    scale: 0;
+    opacity: 0;
+}
+
+.fadeIn{
+    animation: 0.5s fadeIn forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeIn{
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
